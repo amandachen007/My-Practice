@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- For More infomation, pls view: https://www.youtube.com/watch?v=UO8ed-JB4So -->
+    <style>
+       .category1 {
+           color: red
+       }
+
+       .category2 {
+           top: 0px;
+           left: 20%;
+           color: green
+       }
+       .box {
+           position: relative;
+           /* top: 100px; */
+           left: 100px;
+           color: rgb(239, 239, 239);
+           background-color: brown;
+           width: 100px;
+           height: 100px;
+       }
+       .smallbox {
+           position: absolute;
+           top: 30px;
+           left: 30px;
+           font-size: 10px;
+           width: 50px;
+           height: 50px;
+           background-color:rgb(12, 43, 43);
+       }
+       .fixedbox {
+           position: fixed;
+           top: 400px;
+           left: 300px;
+           width: 50px;
+           height: 50px;
+           background-color: green;
+           font-size: 10px;
+           color: white;
+       }
+    </style>
+</head>
+<body>
+    <h1>Css Positioning Type</h1>
+    <div class="category1">
+        <ul>
+        <li>Static(default)</li>
+        <li>Relative: refer to it's original position. The position will not remove elements from the document flow.</li>
+        <li>Abosulte: they are positioned according to the nearest containing element. They will be removed from document flow.</li>
+        <li>Fixed: they are positioned according to the viewport.(browser). Removed from document flow.</li>
+        <li>Sticky: containing element (with conditions met).</li>
+        </ul>
+    </div>
+    <div class="category2">
+        <ul>
+            <li>Top</li>
+            <li>Right</li>
+            <li>Bottom</li>
+            <li>Left</li>
+        </ul>
+    </div>
+    <div>
+        <p>CSS Positioning Offset<br>
+        .box {
+            position:relative;
+            top: 100px;
+        }<br>
+        Object will float from its original position based on it's position seeting.<br>
+        Be careful about + - position;
+        Example:
+        <div class="box">
+           This is a box. 
+           <div class="smallbox">This is a small box.</div>
+        </div>
+        <div class="fixedbox">
+            This is a fixed box. 
+         </div>
+    </div>
+    <div> Document Flow (Block)
+        <p> Block means each will take up a line.
+        <ul>
+            <li>Div</li>
+            <li>Paragraph</li>
+            <li>Lists</li>
+        </ul>
+    </div>
+
+    <div> Document Flow (Inline)
+        <p> Inline means each will take up a line.
+        <ul>
+            <li>Image</li>
+            <li>Links</li>
+            <li>Inputs</li>
+        </ul>
+    </div>
+
+    <span> Z - index (layers)</span>
+</body>
+</html>
